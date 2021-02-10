@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap');
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: $primary-font;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body{
+    margin: 0;
+}
+
+.mt-1{
+    margin-top: 1rem;
+}
+.mt-2{
+    margin-top: 2rem;
+}
+.mb-1{
+    margin-bottom: .5rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.text-center{
+    text-align: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.title{
+    // color: darken($color: $dark-orange, $amount: 20);
+    color: $dark-orange;
+    font-size: 3rem;
+}
+.link{
+    color: $link;
+    font-weight: 600;
+    text-decoration: none;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+}
+hr{
+    margin: 1.5rem 0;
+    border: none;
+    height: 1px;
+    background-color: $primary-font;
+}

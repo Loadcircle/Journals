@@ -1,0 +1,49 @@
+.auth__main{
+    align-items: center;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.auth__box-container{
+    padding: 1rem;
+    background-color: white;
+    border-radius: $radius;
+    max-width: 960px;
+    width: 50%;
+}
+.auth__input{
+    border: none;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    display: block;
+    font-size: 1.2rem;
+    padding: .5rem;
+    width: 100%;
+
+    &:focus{
+        background-color: lighten($color: $primary-font, $amount: 60);
+    }
+}
+.auth__login-btn{
+    align-items: center;
+    background-color: lighten($color: $primary, $amount: 10);
+    border-radius: $radius;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem;
+    width: 14rem;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 500;
+    pointer-events: none;
+
+    &.active{
+        background-color: darken($color: $primary, $amount: 10);
+        cursor: pointer;
+        pointer-events: auto;
+    }
+}

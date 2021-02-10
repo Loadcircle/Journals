@@ -1,0 +1,48 @@
+
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;
+
+.google-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+    height: 2.5rem;
+    background-color: $google-blue;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    overflow: hidden;
+    
+
+    transition: box-shadow .3s ease;
+
+    .google-icon-wrapper {
+        width: 40px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .google-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .btn-text {
+        float: right;
+        margin: 11px 40px 0 0;
+        letter-spacing: 0.2px;
+
+        b{
+            color: $white;
+            font-weight: 500;
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 6px $google-blue;
+    }
+    &:active {
+        background: $button-active-blue;
+    }
+}
