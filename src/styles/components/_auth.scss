@@ -27,7 +27,7 @@
 }
 .auth__login-btn{
     align-items: center;
-    background-color: lighten($color: $primary, $amount: 10);
+    background-color: $primary;
     border-radius: $radius;
     color: white;
     display: flex;
@@ -39,11 +39,15 @@
     font-size: 1.2rem;
     border: none;
     font-weight: 500;
-    pointer-events: none;
+    pointer-events: auto;
 
-    &.active{
-        background-color: darken($color: $primary, $amount: 10);
-        cursor: pointer;
-        pointer-events: auto;
+    &:disabled{
+        background-color: lighten($color: $primary, $amount: 10);
+        pointer-events: none;
     }
+}
+
+.auth__alert-error{
+    background-color: darken($color: red, $amount: 30);
+    color: #fff;
 }

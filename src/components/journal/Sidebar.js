@@ -1,22 +1,40 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { StartLogout } from '../../actions/auth';
+import { startNewNote } from '../../actions/notes';
 import { JournalEntries } from './JournalEntries'
 
 export const Sidebar = () => {
+
+    const dispatch = useDispatch();
+
+    const state = useSelector(state=>state.auth);
+
+    const handleLogOut = ()=>{
+
+        dispatch(StartLogout());
+
+    }
+
+    const handleNewEntry = ()=>{
+        dispatch(startNewNote())
+    }
+
     return (
-        <div>
-            <aside className="journal__sidebar">
+        <div className="journal__sidebar animate__animated animate__fadeIn">
+            <aside className="">
                 <div className="journal__sidebar-top">
                     <h2>
                         <i className="far fa-moon" />
-                        <span>Jesus Milano</span>
+                        <span>{state.name}</span>
                     </h2>
 
-                    <button className="journal__logout-btn">
+                    <button className="journal__logout-btn" onClick={handleLogOut}>
                         Salir
                     </button>
                 </div>
 
-                <div className="journal__new-entry">
+                <div className="journal__new-entry" onClick={handleNewEntry}>
                     <i className="far fa-calendar-plus fa-5x"/>
                     <p>
                         Nueva entrada
@@ -24,7 +42,7 @@ export const Sidebar = () => {
                 </div>
             </aside>
 
-            <JournalEntries/>
+            <JournalEntries />
         </div>
     )
 }

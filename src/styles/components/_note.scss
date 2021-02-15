@@ -1,0 +1,52 @@
+.note__main-content{
+    width: 100%;
+
+    .notes__appbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: $dark-orange;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+
+        button{
+            margin: 0 10px;
+        }
+    }
+
+    .note__content{
+        background-color: $white;
+        border-radius: $radius;
+        box-shadow: $shadow;
+        padding: 1rem;
+        max-width: 40%;
+        margin: auto;
+
+        .note__textarea{
+            
+            border: none;
+            border-radius: $radius;
+            display: block;
+            font-size: 1.2rem;
+            padding: .5rem;
+            width: 100%;
+            min-height: 200px;
+
+            &:focus{
+                background-color: lighten($color: $primary-font, $amount: 60);
+            }
+        }
+        
+        .notes__image{
+            width: 100%;
+            
+            img{
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+}

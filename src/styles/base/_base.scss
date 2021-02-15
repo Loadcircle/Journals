@@ -49,3 +49,16 @@ hr{
     height: 1px;
     background-color: $primary-font;
 }
+.btn{
+    background-color: $primary-font;
+    color: #fff;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+        background-color: lighten($color: $primary-font, $amount: 10);
+    }
+}
