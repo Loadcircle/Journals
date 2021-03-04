@@ -54,7 +54,6 @@ export const AppRouter = () => {
                             isAuthenticated={isLoggedIn}
                         />
 
-            
                     <PrivateRouter 
                         exact
                         path="/" 
