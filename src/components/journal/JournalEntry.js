@@ -8,7 +8,6 @@ export const JournalEntry = ({id, date, title, body, url}) => {
     const noteDate = moment(date);
 
     const activeNoteID = useSelector(state=>state.notes.active);
-    console.log(activeNoteID?.id, id);
 
     const dispatch = useDispatch();
 
